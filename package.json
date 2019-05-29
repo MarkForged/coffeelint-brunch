@@ -11,7 +11,7 @@
     "test": "node_modules/.bin/eslint index.js && node_modules/.bin/mocha"
   },
   "dependencies": {
-    "coffeelint": "~1.16.0"
+    "coffeelint": "~2.1.0"
   },
   "devDependencies": {
     "chai": "*",

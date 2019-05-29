@@ -29,9 +29,9 @@ describe('Plugin', function() {
   });
 
   it('should give correct errors', function(done) {
-    var content = 'b = () ->\n\t\t   a=10'
+    var content = `b = () ->\n\t\t\t\t\ta=10`
 
-    plugin.lint(content, 'file.coffee').then(null, error => {
+    plugin.lint(content, 'file.coffee').then(() => done(), error => {
       expect(error).to.contain('error: indentation at line 2. Expected 2 got 5\nerror: no_tabs at line 2.');
       done();
     });
